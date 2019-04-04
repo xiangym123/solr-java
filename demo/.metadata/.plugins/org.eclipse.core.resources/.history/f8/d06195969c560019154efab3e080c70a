@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.xiangym</groupId>
+  <artifactId>solr-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+  </properties>
+   <parent>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-parent</artifactId>
+<version>1.5.6.RELEASE</version>
+</parent>
+
+  <dependencies>
+  <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+      <version>4.10.3</version>
+  </dependency>
+  <dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<!--假如想使用热部署等开发工具-->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-devtools</artifactId>
+	<scope>runtime</scope>
+</dependency>
+<!--想使用import org.junit.Test必须导入下面两个依赖-->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-test</artifactId>
+	<version>4.3.6.RELEASE</version>
+</dependency>
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version> 4.12</version>
+</dependency>
+
+  
+  
+  
+  
+  </dependencies>
+  
+  
+  
+</project>

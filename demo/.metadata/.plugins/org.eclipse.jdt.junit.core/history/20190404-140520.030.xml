@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Service.setUp" project="solr-demo" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testcase name="setUp" classname="com.xiangym.solr.service.Service" time="1.043">
+    <error>org.apache.solr.client.solrj.impl.HttpSolrClient$RemoteSolrException: Error from server at http://localhost:8880/solr/job: org.apache.solr.search.SyntaxError: Cannot parse 'title:': Encountered "&lt;EOF&gt;" at line 1, column 6.&#13;
+Was expecting one of:&#13;
+    &lt;BAREOPER&gt; ...&#13;
+    "(" ...&#13;
+    "*" ...&#13;
+    &lt;QUOTED&gt; ...&#13;
+    &lt;TERM&gt; ...&#13;
+    &lt;PREFIXTERM&gt; ...&#13;
+    &lt;WILDTERM&gt; ...&#13;
+    &lt;REGEXPTERM&gt; ...&#13;
+    "[" ...&#13;
+    "{" ...&#13;
+    &lt;LPARAMS&gt; ...&#13;
+    "filter(" ...&#13;
+    &lt;NUMBER&gt; ...&#13;
+    &#13;
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.executeMethod(HttpSolrClient.java:577)&#13;
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:241)&#13;
+	at org.apache.solr.client.solrj.impl.HttpSolrClient.request(HttpSolrClient.java:230)&#13;
+	at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)&#13;
+	at org.apache.solr.client.solrj.SolrClient.query(SolrClient.java:942)&#13;
+	at org.apache.solr.client.solrj.SolrClient.query(SolrClient.java:957)&#13;
+	at com.xiangym.solr.service.Service.setUp(Service.java:18)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+&#13;
+</error>
+  </testcase>
+</testrun>

@@ -1,0 +1,32 @@
+package com.xiangym.solr.service;
+
+import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.impl.HttpSolrServer;
+import org.apache.solr.client.solrj.response.QueryResponse;
+import org.junit.Test;
+
+public class Service {
+	private HttpSolrServer httpSolrServer;
+	@Test
+	public void setUp() throws Exception {
+		SolrQuery solrQuery = new SolrQuery(); //构造搜索条件
+        solrQuery.setQuery("title:" + ""); //搜索关键词
+        // 设置分页 start=0就是从0开始，，rows=5当前返回5条记录，第二页就是变化start这个值为5就可以了。
+        solrQuery.setStart((Math.max(10, 1) - 1) * 10);
+        solrQuery.setRows(10);
+        httpSolrServer = new HttpSolrServer("http://localhost:8880/solr/");
+        QueryResponse queryResponse = this.httpSolrServer.query(solrQuery);
+
+
+    }
+	@Test
+	public void delete() throws Exception {
+		HttpSolrServer server = new HttpSolrServer("http://localhost:8880/solr/job");
+        // 根据ID删除
+        server.deleteById("c0001");
+        // 提交
+        server.commit();
+
+
+    }
+}

@@ -1,0 +1,16 @@
+package com.xiangym.solr.service;
+
+import org.apache.solr.client.solrj.SolrQuery;
+
+public class Service {
+	public void setUp() throws Exception {
+		SolrQuery solrQuery = new SolrQuery(); //构造搜索条件
+        solrQuery.setQuery("title:" + keywords); //搜索关键词
+        // 设置分页 start=0就是从0开始，，rows=5当前返回5条记录，第二页就是变化start这个值为5就可以了。
+        solrQuery.setStart((Math.max(page, 1) - 1) * rows);
+        solrQuery.setRows(rows);
+        QueryResponse queryResponse = this.httpSolrServer.query(solrQuery);
+
+
+    }
+}
