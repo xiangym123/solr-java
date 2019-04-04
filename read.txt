@@ -1,0 +1,2 @@
+1、先启动solr
+2、打开  执行main方法  访问http://localhost:8090/getData
